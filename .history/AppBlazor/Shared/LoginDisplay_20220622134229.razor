@@ -1,0 +1,22 @@
+﻿<AuthorizeView>
+    <Authorized>
+        <p> 
+            <AspNetCore>
+
+            str += "var hh = <%= hour(now()) %>; ";
+
+ str += "var mm = <%= minute(now()) %>;";
+
+ str += "var ss = <%= second(now()) %>;";
+            </AspNetCore>
+        </p>
+        <a href="Identity/Account/Manage">Olá, @context.User.Identity?.Name!</a>
+        <form method="post" action="Identity/Account/LogOut">
+            <button type="submit" class="nav-link btn btn-link">Log out</button>
+        </form>
+    </Authorized>
+    <NotAuthorized>
+        <a href="Identity/Account/Register">Register</a>
+        <a href="Identity/Account/Login">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>

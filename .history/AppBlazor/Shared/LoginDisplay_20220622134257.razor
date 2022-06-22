@@ -1,0 +1,15 @@
+﻿<AuthorizeView>
+    <Authorized>
+        <p> 
+            <h1>str += "var hh = <%= hour(now()) %>; ";</h1>
+        </p>
+        <a href="Identity/Account/Manage">Olá, @context.User.Identity?.Name!</a>
+        <form method="post" action="Identity/Account/LogOut">
+            <button type="submit" class="nav-link btn btn-link">Log out</button>
+        </form>
+    </Authorized>
+    <NotAuthorized>
+        <a href="Identity/Account/Register">Register</a>
+        <a href="Identity/Account/Login">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>
