@@ -1,1 +1,1 @@
-# stu-blazer-dotnet-
+# stu-blazer-dotnet
